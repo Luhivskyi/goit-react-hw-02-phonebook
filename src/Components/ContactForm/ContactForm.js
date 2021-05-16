@@ -1,4 +1,5 @@
-import  { Component } from 'react';
+import { Component } from 'react';
+import PropTypes from 'prop-types';
 import {v4 as uuid} from 'uuid'
 
 const INITIAL__STATE = {
@@ -56,6 +57,18 @@ const { name, phone } = this.state;
 }
 
 }
+
+
+ContactForm.propTypes = {
+  tasks: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    }),
+  ),
+  onCheckUnique: PropTypes.func,
+};
 
 
 export default ContactForm;
