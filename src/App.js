@@ -50,7 +50,7 @@ export default class App extends Component {
                 <ContactForm onAdd={this.handleAddContact} onCheckUnick={this.handleCheckUnique} />
                 <h2> Contacts List</h2>
                 <ContactsList contacts={visibleContacts} onRemove={this.handleRemoveContact} />
-                <h2> Form Contact</h2>
+                <h2> Filter</h2>
                 <Filter filter={filter} onChange={this.handleFilterChange }/>
         </>
         )
