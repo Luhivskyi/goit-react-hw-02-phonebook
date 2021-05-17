@@ -47,7 +47,7 @@ export default class App extends Component {
            
             <>
             <h2> Form Contact</h2>
-                <ContactForm onAdd={this.handleAddContact} onCheckUnick={this.handleCheckUnique} />
+                <ContactForm onAdd={this.handleAddContact} onCheckUnique={this.handleCheckUnique} />
                 <h2> Contacts List</h2>
                 <ContactsList contacts={visibleContacts} onRemove={this.handleRemoveContact} />
                 <h2> Filter</h2>
