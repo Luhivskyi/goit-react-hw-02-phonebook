@@ -8,6 +8,12 @@ const INITIAL__STATE = {
 }
 
 class ContactForm extends Component {
+   static propTypes = {
+    onAdd : PropTypes.func.isRequired,
+    onCheckUnique: PropTypes.func.isRequired,
+  };
+        
+
     state = INITIAL__STATE;
 
     handleChangeForm = ({ target }) => {
@@ -49,6 +55,7 @@ const { name, phone } = this.state;
         return (
 
             <form onSubmit={this.handleFormSubmit}>
+  
                 <input type='text' name='name' placeholder='Enter name' value={name} onChange={this.handleChangeForm} />
                 <input type='tel' name='phone' placeholder='Enter phone number' value={phone} onChange={this.handleChangeForm }/>
 <button type='submit'>Add Contact</button>
@@ -58,17 +65,6 @@ const { name, phone } = this.state;
 
 }
 
-
-ContactForm.propTypes = {
-  tasks: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    }),
-  ),
-  onCheckUnique: PropTypes.func,
-};
 
 
 export default ContactForm;
