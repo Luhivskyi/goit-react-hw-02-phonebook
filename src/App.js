@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import ContactForm from './Components/ContactForm';
 import ContactsList from './Components/ContactsList';
-import ContactListItem from './Components/ContactsList'
+// import ContactListItem from './Components/ContactsList'
 import Filter from './Components/Filter'
 
 export default class App extends Component {
@@ -51,7 +51,7 @@ export default class App extends Component {
                 <ContactForm onAdd={this.handleAddContact} onCheckUnique={this.handleCheckUnique} />
                 <h2> Contacts List</h2>
                 <ContactsList contacts={visibleContacts} onRemove={this.handleRemoveContact} />
-                <ContactListItem/>
+                
                 <h2> Filter</h2>
                 <Filter filter={filter} onChange={this.handleFilterChange }/>
         </>
